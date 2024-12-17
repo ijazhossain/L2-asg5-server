@@ -14,7 +14,7 @@ export type TProduct = {
   productName: string;
   productPrice: number;
   productQuantity: number;
-  // releaseDate: Date;
+
   brand: string;
   modelNumber: string;
   category: string;
