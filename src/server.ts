@@ -16,3 +16,17 @@ async function main() {
 }
 
 main();
+process.on("unhandledRejection", () => {
+  console.log(`😈 unhandledRejection is detected; Shutting Down.`);
+  if (server) {
+    server.close(() => {
+      process.exit(1);
+    });
+  }
+  process.exit(1);
+});
+
+process.on("uncaughtException", () => {
+  console.log(`😈 uncaughtExpression is detected; Shutting Down.`);
+  process.exit(1);
+});

@@ -59,7 +59,6 @@ const productSchema = new Schema<TProduct>(
     },
     operatingSystem: {
       type: String,
-      required: [true, "Operating system is required"],
     },
     powerSource: {
       type: String,

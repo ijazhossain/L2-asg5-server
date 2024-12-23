@@ -4,7 +4,7 @@ export type TConnectivity = {
   usbC: boolean;
 };
 export type TFeatures = {
-  cameraResolution: string;
+  cameraResolution?: string;
   storageCapacity: string;
   screenSize: string;
   weight: string;
@@ -14,7 +14,6 @@ export type TProduct = {
   productName: string;
   productPrice: number;
   productQuantity: number;
-
   brand: string;
   modelNumber: string;
   category: string;
