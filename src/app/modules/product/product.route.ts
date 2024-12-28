@@ -4,15 +4,15 @@ import validateRequest from "../../middlewares/validateRequest";
 import { ProductValidations } from "./product.validation";
 
 const router = Router();
-router.get("/products", ProductControllers.getProduct);
+router.get("/", ProductControllers.getProduct);
 router.post(
-  "/products/create-product",
+  "/create-product",
   validateRequest(ProductValidations.createProductValidationSchema),
   ProductControllers.createProduct
 );
-router.delete("/products/:id", ProductControllers.deleteProduct);
+router.delete("/product/:id", ProductControllers.deleteProduct);
 router.patch(
-  "/products/:id",
+  "/product/:id",
   validateRequest(ProductValidations.updateProductValidationSchema),
   ProductControllers.updateProduct
 );

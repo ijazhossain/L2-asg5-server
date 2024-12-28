@@ -28,7 +28,7 @@ const createProductValidationSchema = z.object({
   productPrice: z.number(),
   productQuantity: z.number(),
   brand: z.string(),
-  modelNumber: z.string(),
+
   category: z.string(),
   operatingSystem: z.string().optional(),
   powerSource: z.enum(["battery-powered", "plug-in"]),

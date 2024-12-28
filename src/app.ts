@@ -4,10 +4,11 @@ import cors from "cors";
 import { ProductsRoutes } from "./app/modules/product/product.route";
 import globalErrorHandler from "./app/middlewares/globalErrorHandler";
 import notFound from "./app/middlewares/notFound";
+import router from "./app/routes";
 //parser
 app.use(express.json());
 app.use(cors());
-app.use("/", ProductsRoutes);
+app.use("/", router);
 app.get("/", (req: Request, res: Response) => {
   res.status(200).json({
     success: true,
